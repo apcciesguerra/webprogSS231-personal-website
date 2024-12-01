@@ -1,13 +1,14 @@
 body {
-    background-color: lightblue;
-   }
-   
-   h1 {
-    color: white;
-    text-align: center;
-   }
-   
-   p {
-    font-family: verdana;
-    font-size: 20px;
-   }
+    background-color: black; 
+    color: white;          
+    font-family: Arial, sans-serif; 
+  }
+  
+  h1, h3 { /* Target both h1 and h3 */
+    text-align: center;  
+    color: #e0ffff; /* Light cyan color for headings */ 
+  }
+  
+  p {
+    font-size: 20px;     
+  }
