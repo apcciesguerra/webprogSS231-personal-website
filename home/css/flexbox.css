@@ -12,3 +12,11 @@
   line-height: 100px;
   font-size: 20px;
 }
+
+.flex-container > div h3 {
+  font-size: 24px;
+}
+
+.flex-container > div p {
+  font-size: 16px;
+}
