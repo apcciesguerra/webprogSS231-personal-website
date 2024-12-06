@@ -3,8 +3,8 @@
 .item3 { grid-area: main; }
 .item4 { grid-area: right; }
 .item5 { grid-area: footer; }
-.item6 { grid-area: footer; }
-.item7 { grid-area: footer; }
+.item6 { grid-area: right; }
+.item7 { grid-area: main; }
 
 .grid-container {
   display: grid;
