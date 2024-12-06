@@ -22,10 +22,13 @@
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
   padding: 20px 0; 
-  font-size: 30px;
 }
 
+.grid-container > div h2 { 
+    font-size: 24px; 
+  }
+
 .grid-container > div p {
-    margin: 0; /* Keep this to remove default margin */
-    font-size: 18px;  /* Add this line to adjust font size */
+    margin: 0; 
+    font-size: 18px;  
   }
