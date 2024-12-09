@@ -1,57 +1,72 @@
-.container {
-  display: grid;
-  grid-template-rows: auto 1fr auto; 
-  grid-template-columns: 1fr; 
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+/* Container: Full height with a grid layout */
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;  /* Header, content, footer */
+  grid-template-columns: 1fr; /* One column for the entire container */
+  height: 100vh;  /* Full height */
+}
+
+/* Header and Footer Styling */
 header, footer {
   background-color: #f0f0f0;
   padding: 20px;
   text-align: center;
 }
 
+/* Main Content Layout: Two columns */
 main {
   display: grid;
-  grid-template-columns: 2fr 1fr; 
-  gap: 20px; 
+  grid-template-columns: 2fr 1fr;  /* Two columns: 2fr for main content and 1fr for sidebar */
+  gap: 20px;
   padding: 20px;
 }
 
+/* Main Content Styling: Flex with wrapping */
 .main-content {
   display: flex;
-  flex-wrap: wrap; 
-  gap: 10px; 
+  flex-wrap: wrap;
+  gap: 10px;  /* Space between items */
   background-color: #fff;
   padding: 20px;
 }
 
 .main-content > div {
   background-color: #f1f1f1;
-  width: calc(50% - 10px); /* Two items per row, considering gap */
+  flex: 1 1 calc(50% - 10px); /* Flex grow, shrink and width calculation considering gap */
   text-align: center;
   line-height: 35px;
   font-size: 14px;
   padding: 10px;
 }
 
+/* Sidebar Styling */
 .sidebar {
   background-color: #f5f5f5;
   padding: 20px;
 }
 
+/* Image Styling for Gallery */
 img {
   display: block;
   margin: 0 auto;
-  width: 100%; /* Responsive width */
-  max-width: 382px; /* Limit to original size */
+  width: 100%;  /* Full width, responsive */
+  max-width: 382px;  /* Limit to the original size */
 }
 
+/* Media Query for Small Screens */
 @media (max-width: 768px) {
   main {
-      grid-template-columns: 1fr; /* Stacks content on smaller screens */
+    grid-template-columns: 1fr;  /* Stack the content and sidebar on smaller screens */
   }
 
   .main-content > div {
-      width: 100%; /* Full-width for small screens */
+    flex: 1 1 100%;  /* Full width for items in the main content on smaller screens */
   }
 }
