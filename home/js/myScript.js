@@ -3,11 +3,6 @@ function myFunction() {
 }
 
 function myFunction2() {
-     const aboutMeSection = document.getElementById("about-me"); 
-     if (aboutMeSection) { 
-         const aboutMeText = aboutMeSection.innerText; 
-         document.getElementById("demo").innerHTML = '<br>The text in first paragraph (index 0) is:<br>' + aboutMeText;
-     } else {
-         document.getElementById("demo").innerHTML = "The 'About Me' section was not found.";
-     }
- }
+    const element = document.getElementsByTagName("about-me");
+    document.getElementById("demo").innerHTML = '<br> The text in first paragraph (index 0) is: <br>' + element[0].innerHTML;
+}
