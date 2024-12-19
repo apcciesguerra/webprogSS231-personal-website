@@ -3,6 +3,7 @@ function myFunction() {
 }
 
 function myFunction2() {
-    const element = document.getElementsByTagName("p");
-    document.getElementById("demo").innerHTML = '<br> The text in first paragraph (index 0) is: <br>' + element[0].innerHTML;
+    const elements = document.getElementsByTagName("p");  
+    if (elements.length > 0) 
+        document.getElementById("demo").innerHTML = '<br> The text in first paragraph (index 0) is: <br>' + elements[0].innerHTML;
 }
